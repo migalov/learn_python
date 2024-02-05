@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+  <aside>
+    <img width="150" src="{% static 'main/img/ortemida.png' %}" alt="Bot" />
+    <span>Ortemida</span>
+    <ul>
+      <li><a href="{% url 'home' %}"><i class="fa fa-home"></i> Main</a></li>
+      <li><a href="{% url 'about' %}"><i class="fas fa-address-card"></i> About</a></li>
+      <li><a href="{% url 'news_home' %}"><i class="fas fa-article"></i> News</a></li>
+      <li><a href="{% url 'create' %}"><i class="fas fa-plus"></i>Добавить запись</a></li>
+    </ul>
+  </aside>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>

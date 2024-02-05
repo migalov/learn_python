@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+  <h1>{{ title }}</h1>
+    <div class="features">
+    <p>Lorem ipsum</p>
+    <button class="btn btn-warning">Start!</button>
+    {% for el in values %}
+      {{ el }}
+    {% endfor %}
+  </div>
+{% endblock %}

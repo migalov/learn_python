@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Новости на сайте{% endblock %}
+{% block content %}
+  <h1>Новости на сайте</h1>
+    <div class="features">
+    <p>Lorem ipsum</p>
+    <button class="btn btn-warning">Start!</button>
+    {% for el in values %}
+      {{ el }}
+    {% endfor %}
+    {{ news }}
+    {% if news %}
+      {% for a in news %}
+        <h2>{{ a.title }}</h2>
+        <h3>{{ a.anons }}</h3>
+        <time datetime="{{ a.date }}">{{ a.date }}</time>
+      {% endfor %}
+    {% else %}
+      <p>У вас нет записей</p>
+    {% endif %}
+  </div>
+{% endblock %}

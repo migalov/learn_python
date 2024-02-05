@@ -1,0 +1,25 @@
+body {
+  background-color: #ffc765;
+  display: grid;
+  grid-template-columns: minmax(100px, 200px) 1fr;
+}
+
+aside {
+  background: #181818;
+  padding: 2.5%;
+  height: 100vh;
+  color: #fff;
+  border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+  width: 80px;
+  float: left;
+}
+
+aside .logo {
+  font-size: 40px;
+  margin: 0 0 0 10px;
+  font-weight: 700;
+  position: relative;
+}
